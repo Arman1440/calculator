@@ -20,9 +20,13 @@ def operation():
 
 
 def get_vals():
-  x = float(input("Enter Number:"))
-  y = float(input("Enter Number:"))
-  return x, y
+  while True:
+    try:
+      x = float(input("Enter Number:"))
+      y = float(input("Enter Number:"))
+    except ValueError:
+      print("Invalid input")
+    return x, y
 
 def calculator(op,x,y):
   if op == 1:
